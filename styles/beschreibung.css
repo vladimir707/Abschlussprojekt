@@ -1,0 +1,325 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5,
+}
+
+header, footer {
+    flex: 0 0 auto; /* Prevent header and footer from growing */
+}
+
+main {
+    flex: 0 0 auto; /* Allow main content to grow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack elements vertically */
+    padding: 0; /* Remove any default padding */
+    margin: 20px 0; /* Remove any default margin */
+}
+
+.rectangle {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-rows: 1fr 1fr;  
+    width: 70%; /* Set width to 75% of the page */
+    height: 300px; /* Adjusted height */
+    border: 2px solid #A98467;
+    padding: 5px; /* Add padding to the grid */
+    box-sizing: border-box; /* Include border in dimensions */
+    gap: 5px; /* Optional: No gap between grid items */
+    border-radius: 20px; /* Optional: Add rounded corners */
+    margin-bottom: 5px; /* Reduce the space below the rectangle */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin-top: 5px; /* Reduce the space above the button container */
+}
+
+
+.large {
+    grid-column: 1; /* Span the first column */
+    grid-row: 1 / span 2; /* Span two rows */
+    overflow: hidden;
+    border-radius: 20px; /* Make corners oval */
+}
+
+.small-top {
+    grid-column: 2; /* Occupy the second column */
+    grid-row: 1; /* Occupy the first row */
+    overflow: hidden;
+    border-radius: 20px; /* Make corners oval */
+}
+
+.small-bottom {
+    grid-column: 2; /* Occupy the second column */
+    grid-row: 2; /* Occupy the second row */
+    overflow: hidden;
+    border-radius: 20px; /* Make corners oval */
+}
+
+.rectangle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px; /* Make corners oval */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.btn1, .btn2, .btn3 {
+    width: 50px; /* Square button */
+    height: 50px; /* Square button */
+    background-color: #F0EAD2; /* Button background color */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.svg-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #DDE5B6; /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 60%; /* Adjusted width */
+    height: 60%;
+    max-width: 600px; /* Adjusted max-width */
+    padding: 20px; /* Add padding around the image */
+    background-color: #ADC178; /* Add background color */
+    border-radius: 10px; /* Add rounded corners */
+    position: relative; /* Ensure arrows are positioned relative to the image */
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #130e0e;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #ae2323;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+    border-radius: 50%; /* Make the arrows circular */
+}
+
+.prev {
+    left: 50px; /* Position the left arrow inside the image */
+}
+
+.next {
+    right: 50px; /* Position the right arrow inside the image */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Custom modal styles */
+#customModal {
+    display: none ;/* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12cm; /* Width of the modal */
+    height: 1,5cm; /* Height of the modal */
+    background-color: #fff; /* White background */
+    border: 2px solid #ccc; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the modal */
+    text-align: center; /* Center text */
+    padding: 10px;
+}
+
+#customModal .content {
+    display: inline-block; /* Display content inline */
+    vertical-align: middle; /* Align content vertically */
+}
+
+#customModal svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle; /* Align SVG vertically */
+}
+
+#customModal p {
+    display: inline-block; /* Display text inline */
+    margin: 0;
+    font-size: 16px;
+    vertical-align: middle; /* Align text vertically */
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.price-section {
+    margin: 20px 0;
+}
+
+.features-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.feature {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    align-items: center; /* Выравнивание элементов по вертикали */
+    gap: 10px; /* Промежуток между иконкой и текстом */
+   
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+}
+.svg-feature {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 5px;
+}
+.svg-adresse {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.address-section {
+    margin: 20px 0;
+    height: 2.5rem;
+    align-items: center;
+    text-decoration: underline;
+    cursor: pointer;
+    border-style: hidden;
+}
+
+.description-section h3 {
+    margin-top: 10px;
+}
+
+.contact-section {
+    
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items:center;
+  flex-direction: column;
+   justify-content: space-between;;
+    height: 200px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #F0EAD2; /* Button background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-pic svg {
+    width: 24px;
+    height: 24px;
+    color: #333; /* Цвет иконки */
+}
+
+.contact-info button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d49623;
+    color: rgb(256, 256, 256);
+    cursor: pointer;
+    align-content: center;
+    width: 150px;
+}
+
+.contact-info button:hover {
+    background-color: #a56813
+}
+
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between; 
+    width: 90%;
+    margin: 10px auto;
+    flex-direction: row;
+} 
+

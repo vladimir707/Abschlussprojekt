@@ -1,0 +1,107 @@
+.property-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Position arrows only within their gallery */
+.swiper-container {
+    position: relative; /* This is necessary for arrows to be positioned within the container */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+/* Arrows are unique to each slider */
+.swiper-button-next {
+    right: 10px;
+}
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Можно поменять на 'contain', 'fill' или 'none' в зависимости от потребностей */
+}
+
+.property-info {
+    padding: 15px;
+}
+
+.property-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.property-details span {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #000;
+}
+
+.swiper-pagination-bullet-active {
+    background: #007bff;
+}
+
+.favorite-heart-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 200%;
+    transform: translateX(-50%);
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.favorite-heart-container:hover .tooltip {
+    display: block;
+    opacity: 1;
+}
+
+.favorite-heart {
+    color: #1d1d1f !important;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.location-icon {
+    color: #007bff; /* Blue color */
+    margin-right: 5px;
+}
+
+.address-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.address-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}

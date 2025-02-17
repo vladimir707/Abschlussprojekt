@@ -1,0 +1,102 @@
+.grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-auto-rows: auto;
+    grid-template-rows: 100px auto;
+    /*height: calc(100vh - 50px); /* Учитывается 50px на шапку */
+    /*grid-auto-flow: column;*/
+    grid-row-gap: 40px;
+}
+
+.items {
+    background: #fff;
+    /*border-radius: 10px;*/
+}
+
+.items-hover {
+    filter: grayscale(75%);
+    cursor: pointer;
+    transition: .3s;
+}
+
+/*.items:nth-child(odd) {
+    background: #d17979;
+    
+}*/
+
+.items:nth-child(1) {
+    background: #ffcc00;
+    font-family: Arial, sans-serif;
+    display: flex;
+    grid-column: 1/-1;
+    align-items: center; /* Вертикальное выравнивание текста */
+    justify-content: center; /* Горизонтальное выравнивание текста */
+    font-size: 18px; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    color: #333; /* Цвет текста */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Легкая тень для текста */
+    
+    
+}
+
+.items:nth-child(2) {
+    background: #fff;
+    grid-column-start: 2;
+    grid-column-end: 1;
+    height: auto;
+    
+}
+
+
+.css-hu6rtn {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1rem;
+}
+
+.welcome-banner {
+    text-align: center;
+    margin: 50px;
+}
+
+.custom-button {
+    background-color: #ffcc00; /* Желтый фон кнопки */
+    color: #333; /* Цвет текста */
+    border: none; /* Убираем рамку */
+    width: 180px;
+    height: 60px;
+    border-radius: 5px; /* Скругленные углы */
+    margin: 20px;
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: bold; /* Жирный текст */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень кнопки */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Анимация при наведении */
+}
+
+.custom-button:hover {
+    background-color: #e6b800; /* Темнее желтый при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Усиленная тень при наведении */
+}
+
+.custom-button:active {
+    background-color: #cca300; /* Темно-желтый при нажатии */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Уменьшенная тень при нажатии */
+}
+
+.custom-button:focus {
+    outline: none; /* Убираем стандартную обводку */
+    box-shadow: 0 0 3px 3px rgba(255, 204, 0, 0.5); /* Обводка с акцентом */
+}
+
+
+
+
+

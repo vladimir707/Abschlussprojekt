@@ -1,0 +1,74 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #F7F9FC; /* Light gray background */
+    color: #333333; /* Dark text color */
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    background-color: #FFCC00; /* Yellow background */
+    color: #333333; /* Dark text */
+    padding: 20px 0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+/* Main Content Styling */
+main {
+    background: #FFFFFF; /* White content area */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    font-size: 1.5em;
+    color: #007BFF; /* Blue headings */
+    margin-top: 20px;
+}
+
+main p, main ul {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+main ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/* Link Styling */
+a {
+    color: #007BFF; /* Blue link */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #333333; /* Dark gray footer */
+    color: #FFFFFF; /* White text */
+    border-radius: 8px;
+    font-size: 0.9em;
+}

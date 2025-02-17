@@ -1,0 +1,192 @@
+/* Основной стиль для страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Контейнер для объявлений */
+#anzeigen-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; /* Центрировать объявления */
+}
+
+/* Кнопка добавления новой записи */
+#neue-anzeige {
+   justify-content: center;
+   justify-self: auto;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #dddfe0;
+    color: rgb(6, 6, 6);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#neue-anzeige:hover {
+    background-color: #999a9b;
+}
+
+/* Стиль для блока объявлений */
+.anzeige {
+    
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #fff;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+
+
+
+}
+
+/* Скрытый блок (по умолчанию) */
+.hidden {
+    display: none;
+}
+
+/* Контейнер для формы */
+#anzeige-form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Стили для формы */
+#anzeige-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#anzeige-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+#anzeige-form input,
+#anzeige-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+#anzeige-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Кнопки внутри формы */
+#anzeige-form button {
+    color: #cccbcb;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Анимация при наведении */
+    
+}
+
+
+#anzeige-form button:hover {
+    background-color: #b2b2b5; /* Более тёмный синий при наведении */
+}
+
+
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+    #anzeigen-container {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .anzeige {
+        width: 100%;
+    }
+
+    #anzeige-form-container {
+        max-width: 90%;
+    }
+}
+#anzeige-form-container {
+    max-height: 90vh; /* Максимальная высота 90% экрана */
+    overflow-y: auto; /* Прокрутка по вертикали */
+    overflow-x: hidden; /* Убирает горизонтальную прокрутку */
+    padding: 20px;
+}
+img {
+    width: 280px;
+    
+  }
+
+
+  /* Ограничаем размеры контейнера для слайдера */
+.anzeige {
+    position: relative; /* Относительное позиционирование для дочерних элементов */
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #fff;
+    width: 300px; /* Устанавливаем ширину */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden; /* Скрываем выходящий контент */
+}
+
+/* Слайдер будет в пределах блока .anzeige */
+.swiper-container {
+    width: 100%; /* Используем всю ширину родителя */
+    max-width: 100%; /* Ограничение ширины */
+    height: 200px; /* Задайте высоту для слайдера */
+    overflow: hidden;
+    margin-bottom: 10px; /* Отступ снизу для других элементов */
+    border-radius: 5px; /* Радиус совпадает с блоком */
+}
+.swiper-wrapper {
+    transition: transform 0.5s; /* Анимация при переключении слайдов */
+}
+
+/* Слайды внутри слайдера */
+.swiper-slide img {
+    width: 100%; /* Адаптация изображения под ширину слайда */
+    height: 100%; /* Адаптация по высоте */
+    object-fit: cover; /* Убирает искажения */
+    border-radius: 5px;
+}
+
+/* Пагинация и кнопки навигации */
+.swiper-pagination {
+    bottom: 10px; /* Расположим внутри слайдера */
+    position: absolute;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #333; /* Цвет стрелок */
+    top: 50%; /* Выравнивание по центру высоты */
+    transform: translateY(-50%);
+    z-index: 10; /* Поверх слайдов */
+}

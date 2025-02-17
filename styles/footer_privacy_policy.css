@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc; /* Pastel gray */
+    color: #333333; /* Dark gray text */
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffcc00; /* Hauptgelb */
+    color: #000000; /* Black for contrast */
+}
+
+h1, h2 {
+    color: #333333; /* Dark gray text */
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+footer a {
+    color: #000000; /* Black for contrast */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #e6b800; /* Yellow on hover */
+}

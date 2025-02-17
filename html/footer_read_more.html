@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="./styles/footer_read_more.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Über uns</h1>
+      <p>
+        Unser Team besteht aus 7 Freunden: Tetiana, Victoria, Natalia, Alona,
+        Natalia Musiienko, Valimir und Elias. Wir betreuen unsere Website rund
+        um die Uhr. Unser Hauptsitz ist in Hannover, aber wir haben noch 3
+        weitere Niederlassungen in Berlin, München und Düsseldorf.
+        <span id="moreText" class="hidden">
+          Wir beraten unsere Kunden individuell, um in jeder Stadt Deutschlands
+          ihr Traumhaus oder ihre Traumwohnung zu finden. Bei Problemen sind wir
+          auch nachts unter der Nummer 0123456789 für Sie erreichbar.
+          <br /><br />
+          **Wir respektieren Ihre Privatsphäre und Ideen.**
+        </span>
+      </p>
+      <button id="readMoreBtn">Mehr lesen</button>
+    </div>
+
+    <script>
+      const readMoreBtn = document.getElementById("readMoreBtn")
+      const moreText = document.getElementById("moreText")
+
+      readMoreBtn.addEventListener("click", () => {
+        moreText.classList.toggle("hidden")
+        readMoreBtn.textContent = moreText.classList.contains("hidden")
+          ? "Mehr lesen"
+          : "Weniger anzeigen"
+      })
+    </script>
+  </body>
+</html>

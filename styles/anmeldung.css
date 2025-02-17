@@ -1,0 +1,121 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    background-color: #fff; 
+    overflow: auto; 
+}
+
+
+
+    .container {
+        display: flex;
+        width: 100%;
+        max-width: 1800px;
+        height: 130vh;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+}
+
+
+.left-side {
+    width: 40%; 
+    background-color: #fff; 
+    padding: 5px 5px; 
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.card {
+    border: none;
+    background-color: transparent;
+    height: auto;
+}
+
+
+.card-header {
+    background: none;
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+}
+
+.logo {
+    max-width: 300px; 
+    height: auto;
+    margin-bottom: 5px; 
+}
+
+
+.form-control {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+/* Кнопка "Fortfahren" */
+.btn-primary {
+    background-color: #ffcc00;
+    border: none;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #e6b800;
+    color: #000;
+}
+
+/* Стили для разделителя */
+.divider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.divider-line {
+    width: 45%;
+    border-top: 1px solid #ddd;
+}
+
+.divider-text {
+    margin: 0 10px;
+    color: #aaa;
+}
+
+/*  "Jetzt anmelden" */
+.btn-outline-secondary {
+    color: #333;
+    border-color: #ddd;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+
+.right-side {
+    width: 60%; 
+    height:140vh; 
+    background-image: url('../img/anmeldung.jpg'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+

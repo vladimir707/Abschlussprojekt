@@ -1,0 +1,86 @@
+:root {
+    --img-width: 45vw;
+    --img-height: 400px;
+    --btn-border-radius: 8%;
+    --card-border-radius: 5%;
+    --max-min-width: 70px;
+    --test-border: solid 2px blue;
+    --filter-input-height: 40px;
+}
+
+.sidebar {
+    width: 250px;
+    position: fixed;
+    left: 0;
+    top: 100;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+    overflow-y: auto;
+}
+.filter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.filter-bar {
+    width: 100%;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.filter-form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+#clear-filter-form {
+    width: fit-content;
+    justify-content: center;
+  
+}
+
+
+
+
+
+.btn {
+    border-radius: var(--btn-border-radius);
+}
+
+.submit-filter {
+    border-radius: var(--btn-border-radius);
+    background-color: #FFCC00;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: fit-content;
+    border-color: #DDDDDD;
+    border: none;
+}
+
+.submit-filter:hover {
+    background-color: #E6B800;
+    cursor: pointer;
+}
+
+.clear-filter {
+    border: none;
+    cursor: pointer;
+ 
+}
+
+
+
+.btn {
+   
+    width: fit-content;
+}

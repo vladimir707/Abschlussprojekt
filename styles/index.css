@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --img-width: 45vw;
+
+    --img-height: 400px;
+    --btn-border-radius: 8%;
+    --card-border-radius: 5%;
+    --max-min-width: 70px;
+    --test-border: solid 2px blue;
+    --filter-input-height: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+html {
+    font-size: 16px;
+}
+
+#body-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+}
+
+#footer-div {
+    flex: 0;
+}
+
+#main-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    flex: 1;
+}
+
+#scroll-up-btn {
+    border-radius: 100%;
+    background-color: black;
+    min-width: 80px;
+    min-height: 80px;
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*-----------------Image Scroller----------------------------*/
+.scroll-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 8px;
+    align-items: center;
+    width: 100%;
+}
+
+.appartment-card {
+    width: var(--img-width);
+    -webkit-box-shadow: 0px 0px 28px 8px rgba(157, 172, 193, 0.87);
+    box-shadow: 0px 0px 28px 8px rgba(157, 172, 193, 0.87);
+    border-radius: var(--card-border-radius);
+}
+
+.appartment-card * {
+    border-radius: inherit;
+}
+
+.img-scroller-container {
+    width: var(--img-width);
+    height: var(--img-height);
+    overflow: hidden;
+    position: relative;
+}
+
+.img-inner-container {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: 100%;
+}
+
+img.logo {
+    width: 200%; /* Логотип не превышает размеры контейнера */
+    height: auto;    /* Сохраняет пропорции */
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+
+}
+
+.default-img {
+    width: var(--img-width);
+    height: var(--img-height);
+}
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    bottom: 40%;
+
+}
+
+.arrow-right {
+    right: 0;
+
+}
+
+
+.arrow-left {
+    left: 0;
+}
+
+.count-scroll {
+    position: absolute;
+    z-index: 100;
+    bottom: 4%;
+    font-family: 'Arial, Helvetica, sans-serif';
+    font-size: 45px;
+    color: #173660;
+    text-shadow: 2px 2px 4px orange;
+    left: 4%;
+
+}
+
+/*------------------------------Info Card-----------------------------------*/
+.adresse::before {
+    content: url("../icons/location.svg");
+
+}
+
+.adresse::before {
+    content: url("../icons/location.svg");
+
+}
+
+
+.info-icon path {
+    fill: currentColor;
+}
+
+.info-item :nth-child(2) {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 2%;
+
+}
+
+.info-item :nth-child(1) {
+    color: #333;
+    font-size: 1rem;
+}
+
+.icon-submit-btn {
+    border: none;
+
+}
+
+
+/*-------------------Grid stracture of info cards--------------------------------*/
+.appartment-info {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 2px;
+    column-gap: 2px;
+    width: 100%;
+    padding: 40px;
+    height: fit-content;
+
+
+
+}
+
+.appartment-info * {
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+
+
+
+
+
+}
+
+.titel {
+    color: #333;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    font-size: 1.3rem;
+
+
+
+}
+
+.adresse {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    font-size: 1rem;
+
+
+}
+
+.wohnfläche {
+    grid-column: 1/2;
+    grid-row: 3/4;
+
+}
+
+.kaltmiete {
+    grid-column: 2/3;
+    grid-row: 3/4;
+
+}
+
+.zim-zahl {
+    grid-column: 3/4;
+    grid-row: 3/4;
+
+}
+
+.like-btn {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    place-self: center;
+    cursor: pointer;
+
+}
+
+.adresse {
+    color: blue;
+}
+
+/*----------------------------Media------------------------------------*/
